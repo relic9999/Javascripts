@@ -1,0 +1,33 @@
+<input type=submit class='submitbutton' value='Submit' name=btnSubmit onclick='return checkResources()'>
+
+<script type="text/javascript"> 
+function checkResources() 
+{ 
+var x = checkForm();
+if(x==true){
+if(document.forms[0].Resources_whitepaper.checked)
+{ResourcePop();
+
+}
+else if(document.forms[0].Resources_metermigrateltr.checked)
+{ResourcePop();
+}
+else if(document.forms[0].Resources_DMbrochure.checked)
+{ResourcePop();
+}
+else if(document.forms[0].Resources_profitpts.checked)
+{ResourcePop();
+}
+else if(document.forms[0].Resources_prodconnect.checked)
+{ResourcePop();
+}
+}
+return x;
+}
+</script>
+
+<script type="text/javascript"> 
+function ResourcePop() {
+window.open( "http://www.pbdmt1.com/sites/clientfiles/pitneybowes/resource_page.htm", "Home", "toolbar=yes, location=no, scrollbars=yes, width=600" )
+}
+</script>

@@ -1,0 +1,26 @@
+<input type=submit class='submitbutton' value='Submit' name=btnSubmit onclick='return checkResources()'>
+
+<script type="text/javascript"> 
+function checkResources() 
+{ 
+var x = checkForm();
+if(x==true)
+{
+if(document.forms[0].PurchaseLogo.checked)
+{
+alert('Your form has been submitted. Please use the Upload Logo page to submit your logo. Thank you!');
+LogoPop();
+}
+}
+return x;
+}
+</script>
+
+
+<script type='text/javascript'>
+function LogoPop() {
+
+window.open( 'http://lutron.scisteps.com/upload/form/formupload.asp?wfid=19', 'LogoUpload', 'toolbar=yes, location=no, scrollbars=yes, width=650' )
+
+}
+</script>

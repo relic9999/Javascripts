@@ -1,0 +1,18 @@
+<SCRIPT TYPE="text/javascript">
+<!--
+function hspop(mylink, windowname)
+{
+if (! window.focus)return true;
+var href;
+if (typeof(mylink) == 'string')
+   href=mylink;
+else
+   href=mylink.href;
+window.open(href, windowname, 'width=400,height=400,scrollbars=yes');
+return false;
+}
+//-->
+</SCRIPT>
+
+
+<A HREF="http://register.myhaincelestial.com/sites/clientfiles/myhaincelestialregister/reg/hs.asp?m=alofland@cierant.com" onClick="return hspop(this,'HealthyScoop')">this link</A>

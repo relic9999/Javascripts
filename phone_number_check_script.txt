@@ -1,0 +1,13 @@
+<script language="javascript">
+var re = /^\(?(\d{3})\)?[\.\-\/]?(\d{3})[\.\-\/ ]?(\d{4})$/
+function checkPhone(){
+	phone = document.forms[0].Telephone.value;
+	validPhone = re.exec(phone)
+	if (validPhone) {
+		document.forms[0].Telephone.value = validPhone[1] + "/" + validPhone[2] + "-" + validPhone[3] 
+	}else{
+		alert("The phone number is not in the correct format.  Please use ###/###-####") 
+	return false;
+	} 
+}
+</script>

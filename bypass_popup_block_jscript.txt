@@ -1,0 +1,88 @@
+If you're like me and you're seeing something like 60 - 70 percent of page views not displaying ads, you might want to let your visitors know that what they're doing is immoral and ad blocking is going to kill the free internet. I regard 60 - 70% of page views as a staggering proportion that leans dangerously close to making advertising pointless. If that percentage holds true for other sites you can rest assured that their days of either being a free service or even around are numbered.
+
+So, as a website publisher I devised a way to let ad blockers know that I don't approve of what they're doing.
+
+It's done using JavaScript with a little creativity to provide some safety against savvy web users who in addition to blocking ads, would otherwise try and block your blocking or notifying them.
+
+The JavaScript
+
+This is done in two parts. The first block of code must be placed at the END of your page, just before the <*/body*>tag.
+var bd = document.getElementsByTagName("body");
+var pc = bd[0].innerHTML;
+bd[0].innerHTML = "";
+
+What this code does is take the entire contents of your page, stuff it in a variable and then remove it. The reasons for this will be explained shortly.
+
+The next thing we need to do is add this code to within your <*head*><*/head*> tags.
+var l = "abcdefghijklmnopqrstuvwxyz0123456789";
+var dn;
+for(var i=0; i<20; i++) dn += l.charAt(Math.round(Math.random()*l.length));
+var msg = "Put your message here - maybe something about how ad blocking threatens the free nature of the internet, or how people who block ads are essentially stealing the time, effort and money you put into providing your website.";
+
+window.onload = function()
+{
+var b = document.getElementsByTagName("body");
+b[0].innerHTML = pc;
+
+document.getElementById("content").innerHTML = "<style type="text/css" media="all">#"+dn+" { padding: 4px; margin; 8px; background-color: #666; display: block; } #"+dn+" * { color: #FFF; }</style>" + document.getElementById("content").innerHTML;
+
+var z = document.getElementById(dn);
+
+if(window._AdblockFiltered || z.offsetHeight < 60 || z.style['display'] == 'none')
+{
+document.getElementById(dn).innerHTML = msg;
+}
+else if(document.getElementById(dn) == undefined || document.getElementById(dn) == null)
+{
+b[0].innerHTML = msg;
+}
+}
+
+This code does several things. The first thing it does is generate a unique, random identity for a containing the ad. This is to prevent FireFox users from applying custom CSS to hide both your ad and your message. If you hard-code an id, rest assured that plenty of ad blockers will also block your notice. Because they're cool people like that.
+
+After it creates the random id it puts the page's content back where it originally was - remember we took it out at the end of the page? The reason we put it back in in the window.onload event is so that the same wonderful people who would block your ads would also override your javascript preventative measures - if they could. So, we take all the content out of the page, and if that function is allowed to run we put it back in.
+
+The next step in the script is to setup our CSS styling for our notice. Because the id is generated randomly you can't hard-code it in to your external CSS or stylings.
+
+Then we get to the crux of it - the actual detection of whether a user is blocking the advertisements, and the behaviour the browser should exhibit if they are.
+
+The variable z becomes a shortcut to our div with the random id. The loop below is where it actually detects whether the ad has been blocked:
+if(window._AdblockFiltered || z.offsetHeight < 60 || z.style['display'] == 'none')
+{
+document.getElementById(dn).innerHTML = msg;
+}
+else if(document.getElementById(dn) == undefined || document.getElementById(dn) == null)
+{
+b[0].innerHTML = msg;
+}
+
+The first thing you'll notice is that AdBlock gets it's own special mention. Fortunately, the authors made AdBlock set a property in the browser to say when ads were being blocked. That value will either be true, false or nothing. If it's true then the user gets to see the message. The other conditions that will force the user to see the message there are if the height of 'z' is less than 60, or if 'z' has display: none set.
+
+The else if let's us do one more check - making sure that 'z' exists. 'z' is our div with the ad (or message to ad blockers) in it. If it doesn't exist, the code above will replace the entire page's content with the letter. Drastic, but boo hoo. People blocking advertisements make a conscious choice to bypass the only revenue stream 99% of the internet has available.
+
+Now - if you know javascript you might be wondering where exactly 'z' comes from. All we've done in the code is generate an id for 'z'. We haven't actually created it as an element on the page.
+
+The third and final step is to create our 'z' div element with our advertisement:
+<script type="text/javascript">
+document.write("<div id="" + dn + "">");
+</script>
+
+<b><---- put your adsense, or other ad code here -----></b>
+
+<script type="text/javascript">
+document.write("</div>");
+</script>
+
+We now have placed JavaScript in 3 locations throughout the page - in the , just prior to the tag and where we place the actual ads.
+
+The only simple way for a user to bypass the message and the advertisements is to turn off JavaScript. I doubt many people will bother. If you think a message is too subtle, you can modify the code to redirect people running ad blockers like so:
+if(window._AdblockFiltered || z.offsetHeight < 60 || z.style['display'] == 'none')
+{
+document.location = "/no-ad-blockers-allowed.html";
+}
+else if(document.getElementById(dn) == undefined || document.getElementById(dn) == null)
+{
+document.location = "/no-ad-blockers-allowed.html";
+}
+
+Please remember though - part of what has sparked the irrational dislike of *all* ads is the unseemly behaviour of *some* ads. If you use this method to ensure your user sees 3 "smiley" banners and "punch the [whatever]", you are reinforcing what they're fighting against - gaudy, annoying ads. If you use discrete advertising methods like AdSense or YPN, you can inform the users that there are no pop-ups / pop-unders, malicious or distracting ads, and hopefully they will unblock your site. ` 

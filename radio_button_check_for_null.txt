@@ -1,0 +1,13 @@
+function checkOptIn() 
+{ 
+if (document.getElementById("OptInStatus1").checked == false) {
+	if (document.getElementById("OptInStatus2").checked == false) {
+	(document.getElementById("OptInStatus1").checked = true)
+}
+}
+}
+
+
+
+<input type=radio Name="OptInStatus" value="51" checked id="OptInStatus1"  > Yes 
+<input type=radio Name="OptInStatus" value="52" id="OptInStatus2"  > No 

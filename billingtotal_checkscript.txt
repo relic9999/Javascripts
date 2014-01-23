@@ -1,0 +1,14 @@
+<center><input type='submit' class="submitbutton" value='SUBMIT' name='btnSubmit' onclick='return TotalCheck();'></center>
+
+<script language="javascript"> 
+function TotalCheck() 
+{
+	if (document.forms[0].CySourceBillingPrice.value == "" || document.forms[0].CySourceBillingPrice.value == "0")
+	{ 
+		alert("Please select a ticket option or a donation amount.");
+		document.forms[0].Ticket_Type_Level1.focus();
+		return false;
+	}
+	return checkForm();
+}
+</script>

@@ -1,0 +1,54 @@
+<TABLE cellSpacing=5 cellPadding=1 width="100%" border=0>
+
+<TR>
+<TD colSpan=2><SPAN class=SubTitle>Have Your Logo Automatically Inserted Into MarketMover Targeted Sales Module Templates!</SPAN><BR>The&nbsp;MarketMover Targeted Sales Module system permits you to customize a variety of marketing materials for your local use. The customization options include placement of your company logo in the documents you create. To simplify continuous use of the application, it is best if you can upload a logo that will automatically be placed in the documents instead of having to place a logo each time you use a template.<BR></TD></TR>
+<TR>
+<TD class=BodyHeadYel colSpan=2>Logo Upload Instructions</TD></TR>
+<TR>
+<TD colSpan=2>The following specifications should be used when uploading logos in this system: </TD></TR>
+<TR vAlign=top align=left>
+<TD class=BodyHeadYel style="FONT-SIZE: 9pt" align=right width=1>1.&nbsp;</TD>
+<TD width="99%">Logos should be "print quality" with a printable resolution of 300 dpi, at approximately 3" wide or 2" high.</TD></TR>
+<TR vAlign=top align=left>
+<TD class=BodyHeadYel style="FONT-SIZE: 9pt" align=right width=1>2. </TD>
+<TD width="99%">Logos preferably should be submitted in Encapsulated Postscript (.EPS) file format. Other acceptable formats include:<BR>Tagged Image File format (.TIF) or a high resolution JPEG (.JPG). Note that "Photoshop EPS" files are typically not true Encapsulated Postscript files and thus are subject to the normal pixel resolution considerations as a JPEG image.</TD></TR>
+<TR vAlign=top align=left>
+<TD class=BodyHeadYel style="FONT-SIZE: 9pt" align=right width=1>3. </TD>
+<TD width="99%">Logos can be compressed in a ZIP or Stuffit (.SIT) file for faster uploading. </TD></TR>
+<TR vAlign=top align=left>
+<TD class=BodyHeadYel style="FONT-SIZE: 9pt" align=right width=1>4. </TD>
+<TD width="99%">If you do not have a logo available now, you will still be able to load your logo into individual templates.</TD></TR>
+<TR vAlign=top align=left>
+<TD align=right width=1>&nbsp;</TD>
+<TD width="99%">
+<P><STRONG>Once we receive a logo, we will open it to ensure quality, then upload it to our system. Your logo will be available in the templates within 48 hours of submission. If your logo is deemed incompatible with&nbsp;this application, we will e-mail you to tell you what is wrong and what options we suggest.<BR></STRONG></P></TD></TR>
+<TR vAlign=top align=left>
+<TD class=BodyHeadYel style="FONT-SIZE: 9pt" align=right width=1>5. </TD>
+<TD>Once you have submitted your logo, click the "Close Window" button.</TD></TR></TABLE>
+
+
+<SCRIPT language=JavaScript type=text/JavaScript>
+<!-- 
+function LogoPop() { window.open( 'http://pms-pdms.orsnasco.com/upload/form/formupload.asp?wfid=6', 'LogoUpload', 'toolbar=yes, location=no, scrollbars=yes, width=695' ) }
+//-->
+</SCRIPT>
+
+<span class="MainHead">Headline</span><br>
+		<span class="SubHeadColor"></span><br>
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit, 
+      	sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim 
+      	ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip 
+      	ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate 
+      	velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat 
+      	cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id 
+      	est laborum
+
+
+HEADER
+
+<TABLE><LINK href="http://www.marketmovertsm.com/sites/clientfiles/marketmovertsmwww/site/KMM_resource_new.css" type=text/css rel=stylesheet>
+
+<TR>
+<TD><SPAN class=MainHead>Kodak MarketMover Targeted Sales Module<BR>Logo Upload Facility</SPAN></TD></TR></TABLE>
+
+END HEADER

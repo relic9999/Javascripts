@@ -1,0 +1,32 @@
+<SCRIPT event='onload' for='window'>showPopup();</SCRIPT>
+{
+	if(document.forms[0].AddressEdit.checked == false)
+	{
+		document.forms[0]AddressEdit.value =
+
+
+
+<input type=checkbox name=chkEdits onclick='fnEnable();'>Edits Required.  Please update my profile.
+<script language=javascript>
+function fnEnable()
+{
+  if(document.forms[0].chkEdits.checked == true)
+   { 
+	document.forms[0].EditUserFlag.checked = true;
+	document.forms[0].CompanyName.setAttribute('readOnly',false);
+	document.forms[0].Address1.setAttribute('readOnly',false);
+	document.forms[0].Address2.setAttribute('readOnly',false);
+	document.forms[0].City.setAttribute('readOnly',false);
+	document.forms[0].State.disabled = false;
+	document.forms[0].ZipCode.setAttribute('readOnly',false);
+	document.forms[0].Telephone.setAttribute('readOnly',false);
+	document.forms[0].Fax.setAttribute('readOnly',false);
+	
+   }
+  else {
+	if(document.forms[0].chkEdits.checked == false)
+    	document.forms[0].EditUserFlag.checked = false;
+       }	
+  
+}
+</script>

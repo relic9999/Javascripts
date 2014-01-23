@@ -1,0 +1,84 @@
+<input type=submit class='submitbutton' name='btnSubmit' value='SUBMIT Addl User Info' onclick='return Validations();'>     
+<input type='button' class="submitbutton" value='SUBMIT & Create Next Addl User' name='adduser' onclick='return validateadduser();'>
+<script>
+function Validations()
+{
+if(checkForm() &&  DoValidations())return true; else return false;
+}
+function DoValidations()
+{
+	var Country = document.forms[0].getAttribute("Country").options[document.forms[0].Country.options.selectedIndex].text;  
+	if(Country == "USA")
+	{		
+		
+	document.forms[0].State.value = document.forms[0].getAttribute("Country_State").options[document.forms[0].Country_State.options.selectedIndex].value;			
+		
+	}
+	else
+	{
+			
+	document.forms[0].State.value = document.forms[0].Country_Province.value;		
+			
+	}
+return true;
+}
+
+function trimString(sString) 
+{
+while (sString.substring(0,1) == ' ')
+{
+sString = sString.substring(1, sString.length);
+}
+while (sString.substring(sString.length-1, sString.length) == ' ')
+{
+sString = sString.substring(0,sString.length-1);
+}
+return sString;
+}
+</script>
+
+<script>
+function validateadduser()
+{
+if(checkForm() &&  DoValidations())
+{first(); 
+document.forms[0].submit();
+}
+}
+
+</script>
+
+<script language='javascript' type="text/javascript">
+function first() {
+var ccode = parurl( 'z' );
+window.open ('http://www.marketmovertsm.com/sites/clientfiles/marketmovertsmwww/adduser_register.asp' + '?t=' + ccode )
+}
+function parurl( name )
+{
+  var regexS = "[\\?&]"+name+"=([^&#]*)";
+  var regex = new RegExp( regexS );
+  var tmpURL = window.location.href;
+  var results = regex.exec( tmpURL );
+  if( results == null )
+    return "";
+  else
+    return results[1];
+	
+}
+</script>
+function step()
+{
+var em = document.forms[0].Email.value
+document.forms[0].ThanksURL.value = ('http://techsupport.ecommunique.com/formbuilder/DisplayForm.aspx?ID=94063473d9&email='+em)
+
+}
+
+<script language='javascript' type="text/javascript">
+function Contest() {
+	if (checkForm()) {
+	document.forms[0].Promo_Company.value = document.forms[0].CompanyD.value;
+	document.forms[0].submit();
+	}
+}
+
+</script>

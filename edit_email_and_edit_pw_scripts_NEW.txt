@@ -1,0 +1,85 @@
+Edit email paragraph script
+
+<!--<a href='#$' onClick='callFn();'>Edit E-mail Address </a>
+<script language=javascript>
+function callFn()
+{var t = document.forms[0].Email.value;
+
+if((t == '') ||( t == ' ' ))
+{alert('Please enter your Email Address.');}
+else
+
+{window.open('http://lutron.scisteps.com/formbuilder/DisplayForm.aspx?ID=d10c029ae8?e='+t,'','width=500,height=360');}
+
+}
+
+</script>
+-->
+
+
+
+Edit password paragraph script
+
+<!--<a href = '#$' onClick='callPassword();'>Edit Password</a>
+<script language=javascript>
+function callPassword()
+{
+var t = document.forms[0].Email.value;
+if((t == '') ||( t == ' ' ))
+ {alert('Please enter your Email Address.');
+ }
+else
+ {   window.open('http://lutron.scisteps.com/formbuilder/DisplayForm.aspx?ID=d10c030ae8&email='+t,'','width=500,height=360');
+ }
+}
+</script>-->
+
+********Uncheck Address Edit to capture new************
+
+<SCRIPT event='onload' for='window'>unCheck();</SCRIPT>
+<script language=javascript>
+function unCheck()
+{
+ document.forms[0].AddressEdit.checked = false;
+}
+</script>
+
+*******************************************************
+
+****************RBS Change Password********************
+
+<!-- <a href = "javascript:callPassword()">Edit Password</a>
+<script language=javascript>
+function callPassword()
+{
+var e = document.forms[0].Email.value;
+if((e == '') ||( e == ' ' ))
+ {alert('Please enter your E-mail Address.');
+ }
+else
+ {   window.open('/formbuilder/DisplayForm.aspx?ID=fr3d7273409&email='+e,'','width=400,height=360');
+ }
+}
+</script> -->
+
+*******************************************************
+
+*****************RBS Change E-mail*********************
+
+<!-- <a href="javascript:callFn()">Edit E-mail Address </a>
+<script language=javascript>
+function callFn()
+{
+var g = document.forms[0].Email.value;
+
+if((g == '') ||( g == ' ' ))
+{alert('Please enter your E-mail Address.');}
+else
+
+{window.open('http://rbs.ecommunique.com/formbuilder/DisplayForm.aspx?ID=ro7542725gt&email='+g,'','width=400,height=360');}
+
+}
+
+</script> -->
+
+*******************************************************

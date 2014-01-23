@@ -1,0 +1,12 @@
+<script>
+function MDM_openWindow(theURL,winName,features) 
+{ 
+  var _W=window.open(theURL,winName,features);
+	  _W.focus();
+      _W.moveTo(50,50); 
+} 
+</script>
+
+
+<a href="javascript:MDM_openWindow('popupMapWindow.htm','Interface1','width=763,height=952')">
+<img src="../images/map-stamfordTN.jpg" width="150" height="189"></a>

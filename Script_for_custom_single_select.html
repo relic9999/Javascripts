@@ -1,0 +1,137 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<SCRIPT TYPE="TEXT/JAVASCRIPT"> 
+function setup1() {
+	
+loc = document.getElementById("LocationCode").value;
+  lit = ''
+
+  if (loc == 'Baltimore') {
+    lit = 'Select Session:  '
+    lit = lit + '<SELECT NAME="q1" ONCHANGE="dateFill(document.forms[0].q1.value)">'
+    lit = lit + '<OPTION VALUE="">-Select-</OPTION>'
+    lit = lit + '<OPTION VALUE="312">March 12, 2008</OPTION>'
+    lit = lit + '<OPTION VALUE="313">March 13, 2008</OPTION>'
+    lit = lit + '</SELECT>'
+  } 
+
+  if (loc == 'Minneapolis') {
+    lit = 'Select Session:  '
+    lit = lit + '<SELECT NAME="q1" ONCHANGE="dateFill(document.forms[0].q1.value)">'
+    lit = lit + '<OPTION VALUE="">-Select-</OPTION>'
+    lit = lit + '<OPTION VALUE="310">March 10, 2008</OPTION>'
+    lit = lit + '<OPTION VALUE="311">March 11, 2008</OPTION>'
+    lit = lit + '</SELECT>'
+  } 
+
+  if (loc == 'LosAngeles') {
+    lit = lit + '<SELECT NAME="q1" ONCHANGE="dateFill(document.forms[0].q1.value)">'
+    lit = lit + '<OPTION VALUE="">-Select-</OPTION>'
+    lit = lit + '<OPTION VALUE="314">March 14, 2008</OPTION>'
+    lit = lit + '<OPTION VALUE="315">March 15, 2008</OPTION>'
+    lit = lit + '</SELECT>'
+  } 
+  if (loc == 'Newark') {
+    lit = 'Select Session'
+    lit = lit + '<SELECT NAME="q1" ONCHANGE="dateFill(document.forms[0].q1.value)">'
+    lit = lit + '<OPTION VALUE="">-Select-</OPTION>'
+    lit = lit + '<OPTION VALUE="316">March 16, 2008</OPTION>'
+    lit = lit + '<OPTION VALUE="317">March 17, 2008</OPTION>'
+    lit = lit + '</SELECT>'
+  } 
+  if (loc == 'Chicago') {
+    lit = 'Select Session'
+    lit = lit + '<SELECT NAME="q1" ONCHANGE="dateFill(document.forms[0].q1.value)">'
+    lit = lit + '<OPTION VALUE="">-Select-</OPTION>'
+    lit = lit + '<OPTION VALUE="318">March 18, 2008</OPTION>'
+    lit = lit + '<OPTION VALUE="319">March 19, 2008</OPTION>'
+    lit = lit + '</SELECT>'
+  } 
+
+  document.getElementById('rep1').innerHTML=lit
+  document.getElementById('rep2').innerHTML=''
+
+} 
+
+function dateFill(ans2) {
+
+  document.forms[0].SessionDate.value = ans2
+
+} 
+</script>
+</head>
+
+<body onload="setup1();">
+
+ <Form Action='formprocessor.aspx' Method='Post'>		
+<TABLE>
+	<tr><td>Select Session:&nbsp;&nbsp;</td>
+    <td id="rep1"></td></tr>
+	<TR id=TRIDLocationCode>
+    	<TD id=tdidLocationCode valign="top" >  </TD>
+        <TD nowrap>  <input type="hidden"  value="LosAngeles" name="LocationCode"   ></TD>
+   	</TR>
+    <TR id=TRIDFirstName>
+    <TD id=tdidFirstName valign="top" ><Font class="required" color="red">*</font><Font class="required">First Name:</Font> </TD>
+    <TD nowrap> <input type=text name="FirstName"  size= "25"  maxlength="25" value="Corey"   > </TD>
+    </TR>
+    <TR id=TRIDLastName>
+    <TD id=tdidLastName valign="top" ><Font class="required" color="red">*</font><Font class="required">Last Name:</Font> </TD>
+    <TD nowrap> <input type=text name="LastName"  size= "25"  maxlength="30" value="Dulimba"   > </TD>
+    </TR>
+    <TR id=TRIDCompanyD>
+    <TD id=tdidCompanyD valign="top" ><Font class="required" color="red">*</font><Font class="required">Company:</Font> </TD>
+    <TD nowrap> <input type=text name="CompanyD"  size= "25"  maxlength="40" value="Automated Graphics"   > </TD>
+    </TR>
+    <TR id=TRIDAddr1>
+    <TD id=tdidAddr1 valign="top" ><Font class="required" color="red">*</font><Font class="required">Address 1:</Font> </TD>
+    <TD nowrap> <input type=text name="Addr1"  size= "25"  maxlength="35" value="4590 Graphics Drive"   > </TD>
+    </TR>
+    <TR id=TRIDAddr2>
+    <TD id=tdidAddr2 valign="top" >Address 2: </TD>
+    <TD nowrap> <input type=text name="Addr2"   value="" size= "25"  maxlength="35"   > </TD>
+    </TR><TR id=TRIDCityD>
+    <TD id=tdidCityD valign="top" ><Font class="required" color="red">*</font><Font class="required">City:</Font> </TD>
+    <TD nowrap> <input type=text name="CityD"  size= "25"  maxlength="35" value="White Plains"   > </TD>
+    </TR>
+    <TR id=TRIDStateD>
+    <TD id=tdidStateD valign="top" ><Font class="required" color="red">*</font><Font class="required">State:</Font> </TD>
+    <TD nowrap> <input type=text name="StateD"  size= "2"  maxlength="2" value="MD"   > </TD>
+    </TR>
+    <TR id=TRIDZipD>
+    <TD id=tdidZipD valign="top" ><Font class="required" color="red">*</font><Font class="required">Zip Code:</Font> </TD>
+    <TD nowrap> <input type=text name="ZipD"  size= "10"  maxlength="10" value="20695"   > </TD>
+    </TR>
+    <TR id=TRIDTelephone>
+    <TD id=tdidTelephone valign="top" ><Font class="required" color="red">*</font><Font class="required">Phone: (xxx-xxx-xxxx)</Font> </TD>
+    <TD nowrap> <input type=text name="Telephone"  size= "12"  maxlength="12" value="(301) 843-1800"   > </TD>
+    </TR>
+    <TR id=TRIDEmail>
+    <TD id=tdidEmail valign="top" ><Font class="required" color="red">*</font><Font class="required">E-mail:</Font> </TD>
+    <TD nowrap> <input type=text name="Email"  size= "25"  maxlength="50" value="cdulimba@ags.com"   > </TD>
+    </TR>
+    <TR id=TRIDParagraph>
+    <TD id=tdidParagraph330 colspan="2" valign="top"><P><div align=center><input type=submit class='submitbutton' value='Make Reservation' name=btnSubmit onclick='return checkForm();'></div></P></TD></TR><TR id=TRIDCompany><TD id=tdidCompany valign="top" >  </TD><TD nowrap>  <input type="hidden"  value="Individual" name="Company"   ></TD></TR><TR id=TRIDParagraph><TD id=tdidParagraph331 colspan="2 " valign="top"><P></P> <input type="hidden"  name="WebLeadTypeID" value=17 > <input type="hidden"  name="WebFormID" value=17 ></TD></TR></TABLE></TD></TR><TR><TD></TD></TR></TABLE> <iframe id="RSIFrame" name="RSIFrame" style="width:0px; height:0px; border: 0px" src="blank.html"></iframe>
+
+<input type='Hidden' name='ID' value='14cfc1713a'>
+<input type='Hidden' name='SessionDate' value=''>
+<input type='Hidden' name='ThanksURL' value=''>
+<input type='Hidden' name='myEmail' value='cdulimba@ags.com'>
+<input type='Hidden' name='SourceID' value=1>
+<input type='Hidden' name='hidDomain'>
+<input type='Hidden' name='HideMe' value='my.connectwithkodak.com' >
+<input type='Hidden' name='SourceIPAddress' size='20' maxlength='50' value='10.0.200.227'>
+<input type='Hidden' name='passwordType' value='WEAK'>
+<input type='Hidden' name='swltid' value=''>
+<input type='Hidden' name='MemberID' value=''>
+<input type='Hidden' name='CreateUserFlag'  value='N'>
+
+		</FORM>
+<SPAN ID="rep1"></SPAN>
+
+<SPAN ID="rep2"></SPAN>
+</body>
+</html>

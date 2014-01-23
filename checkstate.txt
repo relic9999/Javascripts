@@ -1,0 +1,18 @@
+function checkIfStateIsRequired()
+	{
+		// if country is US or CA, show & require state field, otherwise hide it
+		var country = document.form.CompanyCountry.options[document.form.CompanyCountry.options.selectedIndex].value;
+		if ( ((country == "US" || country == "CA" || country == "") && !stateIsRequired) ||
+			 ((country != "US" && country != "CA" && country != "") && stateIsRequired) )
+		{
+			stateIsRequired = !stateIsRequired;
+			if (stateIsRequired) {
+				replaceInput("state_input", "below_state_input");
+			}
+			else {
+				removeInput("state_input");
+			}
+		}	
+	}
+
+

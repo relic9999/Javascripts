@@ -1,0 +1,29 @@
+<center><A HREF="javascript:document.forms[0].submit()" 
+onclick="return setOptOut();">
+
+<IMG SRC="http://register.myhaincelestial.com/sites/clientfiles/myhaincelestialregister/reg/images/button_unsubscribe.gif" 
+BORDER="0" ALT="Unsubscribe" 
+NAME="sub_but">
+
+</A></center>
+
+<script language = javascript>
+function setOptOut() 
+{ 
+var x = checkForm();
+if(x==true)
+{
+(document.forms[0].NewsHealthyWayofLifeOptIn.value = 52);
+}
+return x;
+}
+</script>
+
+<div align=center><input type=submit class='submitbutton' value="Update My Profile" name=btnSubmit onclick='return checkForm();'></div>
+
+http://register.myhaincelestial.com/formbuilder/DisplayForm.aspx?ID=3dff941320&email=
+
+
+<strong>A Healthy way of Life&trade;</strong>, The Hain Celestial Group's bi-monthly e-communication containing expert advice on healthy living, special offers and promotions, and new products. To receive your own copy, please select 'Subscribe'
+<br><br>
+If you wish to unsubscribe from A Healthy Way of Life&trade;, please select 'Unsubscribe' and submit this form.

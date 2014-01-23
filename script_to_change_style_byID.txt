@@ -1,0 +1,15 @@
+<script type="text/vbscript">
+<!--
+Sub DivChange (yesnobox, layername)
+ Dim strObjName
+ strObjName = "document.MainForm." & yesnobox & ".value"
+ If eval(strObjName) = "No" Then
+ document.getElementById(layername).style.display = "block"
+ Elseif eval(strObjName) = "Yes" then
+ document.getElementById(layername).style.display = "none"
+ End If
+End Sub
+-->
+</script>
+
+ShrutiShri: document.getElementById("DIVID").setAttribute('AttributeName', 'new attribute value');

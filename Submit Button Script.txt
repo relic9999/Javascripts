@@ -1,0 +1,26 @@
+<input type=submit class='submitbutton' value=SUBMIT name=btnSubmit onclick='return setMarket();'>
+
+<script language = javascript>
+function setMarket() 
+{ 
+var x = checkForm();
+if(x==true)
+{
+(document.forms[0].verticalmarket.value = document.forms[0].VerticalMarketSS[document.forms[0].VerticalMarketSS.selectedIndex].value);
+(document.forms[0].FirstName.value = document.forms[0].Sub_FirstName.value);
+(document.forms[0].LastName.value = document.forms[0].Sub_LastName.value);
+(document.forms[0].Address1.value = document.forms[0].Sub_Address1.value);
+(document.forms[0].Address2.value = document.forms[0].Sub_Address2.value);
+(document.forms[0].City.value = document.forms[0].Sub_City.value);
+(document.forms[0].State.value = document.forms[0].Sub_state[document.forms[0].Sub_state.selectedIndex].value);
+(document.forms[0].ZipCode.value = document.forms[0].Sub_Zip.value);
+}
+return x;
+}
+</script>
+
+
+<br><br><span class="InstructionsNormal">PRIVACY STATEMENT: Ricoh Corporation respects your privacy and will not rent, sell or share personal information about you with other people or nonaffiliated organizations except to provide products or services you've requested.  At any time, you can access your subscription profile and discontinue any future e-communications from us should your interests change. To view our privacy policy, <a href='http://www.ricoh-usa.com/privacy.asp'  target='_blank'>click here.</a></span>
+
+
+<a href="javascript:displayPasswordSyntax();" onMouseover="return window.status='';" class="sLogin">Password Help</a>
